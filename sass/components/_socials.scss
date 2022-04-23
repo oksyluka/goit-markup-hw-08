@@ -1,0 +1,35 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    transition: background-color var(--trans);
+
+    &:hover,
+    &:focus {
+      background-color: var(--active-color);
+    }
+  }
+
+  &__icon {
+    fill: #afb1b8;
+    transition: fill var(--trans);
+
+    .socials__link:hover &,
+    .socials__link:focus & {
+      fill: var(--light-color);
+    }
+  }
+}

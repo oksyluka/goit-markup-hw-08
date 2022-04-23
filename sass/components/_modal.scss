@@ -1,0 +1,76 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transition: opacity var(--trans), visibility var(--trans);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--light-color);
+  opacity: 1;
+  scale: 1;
+  transition: opacity var(--trans), scale var(--trans);
+
+  .backdrop.is-hidden & {
+    opacity: 0;
+    scale: 0;
+  }
+
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  &__icon {
+    fill: #000000;
+    transition: fill var(--trans);
+
+    .modal__button:hover &,
+    .modal__button:focus & {
+      fill: var(--active-color);
+    }
+  }
+
+  &__tytle {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--title-color);
+  }
+}
