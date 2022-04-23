@@ -1,4 +1,4 @@
-.section__team {
+.section--other-background {
   background-color: #f5f4fa;
 }
 
@@ -6,7 +6,7 @@
   display: flex;
   margin: 0;
 
-  &__card {
+  &__item {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
     background-color: var(--light-color);
@@ -19,13 +19,13 @@
     }
   }
 
-  &__member {
+  &__box {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
   }
 
-  &__name {
+  &__title {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -33,7 +33,7 @@
     letter-spacing: 0.03e;
   }
 
-  &__position {
+  &__description {
     margin-bottom: 16px;
     color: var(--text-color);
     font-size: 16px;

@@ -1,4 +1,4 @@
-.section__activity {
+.section--no-padding-top {
   padding-top: 0;
 }
 .activity {
@@ -6,7 +6,7 @@
 
   &__item {
     position: relative;
-    &_:not(:last-child) {
+    &:not(:last-child) {
       margin-right: 27px;
     }
   }
@@ -17,7 +17,7 @@
     height: auto;
   }
   
-  &__name {
+  &__title {
     position: absolute;
     bottom: 0;
     right: 0;
