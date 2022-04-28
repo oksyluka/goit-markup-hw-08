@@ -23,6 +23,64 @@
         <a class="logo header__logo" href="./index.html"
           ><span class="logo__first">Web</span>Studio</a
         >
+        <button type="button" class="menu__button" aria-expanded="false" data-menu-button>
+          <svg class="menu__icon" width="40" height="40" aria-label="Кнопка мобильного меню">
+            <use class="menu__icon menu__icon--open" href="./images/icons.svg#menu"></use>
+            <use class="menu__icon menu__icon--close" href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <!-- Мобильное меню -->
+        <div class="menu-container" data-menu>
+          <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link mobile-nav__link--current" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a class="mobile-contacts__link" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                class="mobile-contacts__link mobile-contacts__link--small-gray"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="" target="_blank" rel="noreferrer noopener"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="" target="_blank" rel="noreferrer noopener"
+                >Twitter</a
+              >
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="" target="_blank" rel="noreferrer noopener"
+                >Facebook</a
+              >
+            </li>
+            <li class="mobile-socials__item">
+              <a class="mobile-socials__link" href="" target="_blank" rel="noreferrer noopener"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
         <nav>
           <ul class="navigation">
             <li class="navigation__item">
@@ -80,13 +138,36 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject1.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project1_lg.jpg    1x,
+                        ./images/projects/project1_lg@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project1_md.jpg    1x,
+                        ./images/projects/project1_md@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project1_sm.jpg    1x,
+                        ./images/projects/project1_sm@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project1_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -104,13 +185,32 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject2.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project2_lg.jpg 1x,
+                        ./images/projects/project2_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project2_md.jpg    1x,
+                        ./images/projects/project2_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project2_sm.jpg    1x,
+                        ./images/projects/project2_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project2_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -128,13 +228,32 @@
             <li class="project__item">
               <a class="project__link" href=""
                 ><div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject3.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project3_lg.jpg 1x,
+                        ./images/projects/project3_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project3_md.jpg    1x,
+                        ./images/projects/project3_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project3_sm.jpg    1x,
+                        ./images/projects/project3_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project3_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -152,13 +271,32 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject4.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project4_lg.jpg 1x,
+                        ./images/projects/project4_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project4_md.jpg    1x,
+                        ./images/projects/project4_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project4_sm.jpg    1x,
+                        ./images/projects/project4_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project4_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -176,13 +314,32 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject5.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project5_lg.jpg 1x,
+                        ./images/projects/project5_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project5_md.jpg    1x,
+                        ./images/projects/project5_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project5_sm.jpg    1x,
+                        ./images/projects/project5_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project5_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -200,13 +357,32 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject6.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project6_lg.jpg 1x,
+                        ./images/projects/project6_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project6_md.jpg    1x,
+                        ./images/projects/project6_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project6_sm.jpg    1x,
+                        ./images/projects/project6_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project6_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -224,13 +400,32 @@
             <li class="project__item">
               <a class="project__link" href=""
                 ><div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject7.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project7_lg.jpg 1x,
+                        ./images/projects/project7_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project7_md.jpg    1x,
+                        ./images/projects/project7_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project7_sm.jpg    1x,
+                        ./images/projects/project7_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project7_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -248,13 +443,32 @@
             <li class="project__item">
               <a class="project__link" href=""
                 ><div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject8.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project8_lg.jpg 1x,
+                        ./images/projects/project8_lg.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project8_md.jpg    1x,
+                        ./images/projects/project8_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project8_sm.jpg    1x,
+                        ./images/projects/project8_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project8_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -272,13 +486,32 @@
             <li class="project__item">
               <a class="project__link" href=""
                 ><div class="project__thumb">
-                  <img
-                    class="project__foto"
-                    src="./images/projects/poject9.jpg"
-                    alt="фото веб-сайта"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project9_lg.jpg    1x,
+                        ./images/projects/project9_lg@2x.jpg 2x
+                      " />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project9_md.jpg    1x,
+                        ./images/projects/project9_md@2x.jpg 2x
+                      " />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project9_sm.jpg    1x,
+                        ./images/projects/project9_sm@2x.jpg 2x
+                      " />
+                    <img
+                      class="project__foto"
+                      src="./images/projects/project9_sm.jpg"
+                      alt="фото веб-сайта"
+                      width="450"
+                      height="294"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -302,58 +535,60 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__wrap">
-          <div>
-            <a class="logo footer__logo" href="./index.html"
-              ><span class="logo__first">Web</span>Studio</a
-            >
-            <address>
-              <ul>
-                <li class="adress__item">
-                  <a
-                    class="adress__link adress__link--mail"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    href="https://google.com/maps"
-                    >г. Киев, пр-т Леси Украинки, 26</a
-                  >
+          <div class="footer__contacts">
+            <div>
+              <a class="logo footer__logo" href="./index.html"
+                ><span class="logo__first">Web</span>Studio</a
+              >
+              <address>
+                <ul>
+                  <li class="adress__item">
+                    <a
+                      class="adress__link adress__link--mail"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://google.com/maps"
+                      >г. Киев, пр-т Леси Украинки, 26</a
+                    >
+                  </li>
+                  <li class="adress__item">
+                    <a class="adress__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  </li>
+                  <li class="adress__item">
+                    <a class="adress__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="footer__socials">
+              <h3 class="footer__tytle">присоединяйтесь</h3>
+              <ul class="socials">
+                <li class="socias__item">
+                  <a class="socials__link socials__link--footer" href="">
+                    <svg class="socials__icon socials__icon--footer" width="20" height="20">
+                      <use href="./images/icons.svg#instagram"></use></svg
+                  ></a>
                 </li>
-                <li class="adress__item">
-                  <a class="adress__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <li class="socials__item">
+                  <a class="socials__link socials__link--footer" href="">
+                    <svg class="socials__icon socials__icon--footer" width="20" height="20">
+                      <use href="./images/icons.svg#twitter"></use></svg
+                  ></a>
                 </li>
-                <li class="adress__item">
-                  <a class="adress__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                <li class="socials__item">
+                  <a class="socials__link socials__link--footer" href="">
+                    <svg class="socials__icon socials__icon--footer" width="20" height="20">
+                      <use href="./images/icons.svg#facebook"></use></svg
+                  ></a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link socials__link--footer" href="">
+                    <svg class="socials__icon socials__icon--footer" width="20" height="20">
+                      <use href="./images/icons.svg#linkedin"></use></svg
+                  ></a>
                 </li>
               </ul>
-            </address>
-          </div>
-          <div class="footer__socials">
-            <h3 class="footer__tytle">присоединяйтесь</h3>
-            <ul class="socials">
-              <li class="socias__item">
-                <a class="socials__link socials__link--footer" href="">
-                  <svg class="socials__icon socials__icon--footer" width="20" height="20">
-                    <use href="./images/icons.svg#instagram"></use></svg
-                ></a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--footer" href="">
-                  <svg class="socials__icon socials__icon--footer" width="20" height="20">
-                    <use href="./images/icons.svg#twitter"></use></svg
-                ></a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--footer" href="">
-                  <svg class="socials__icon socials__icon--footer" width="20" height="20">
-                    <use href="./images/icons.svg#facebook"></use></svg
-                ></a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--footer" href="">
-                  <svg class="socials__icon socials__icon--footer" width="20" height="20">
-                    <use href="./images/icons.svg#linkedin"></use></svg
-                ></a>
-              </li>
-            </ul>
+            </div>
           </div>
           <div class="subscription">
             <h3 class="footer__tytle">Подпишитесь на рассылку</h3>
@@ -373,5 +608,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

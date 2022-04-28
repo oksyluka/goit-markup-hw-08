@@ -1,0 +1,39 @@
+.menu__button {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu__icon {
+  width: 40px;
+  height: 40px;
+  fill: #000000;
+  transition: fill var(--trans);
+}
+.menu__icon--open {
+  opacity: 1;
+}
+.menu__icon--close {
+  opacity: 0;
+}
+.is-active .menu__icon--open {
+  opacity: 0;
+}
+.is-active .menu__icon--close {
+  opacity: 1;
+}
+.menu__icon:hover,
+.menu__icon:focus {
+  fill: var(--active-color);
+}

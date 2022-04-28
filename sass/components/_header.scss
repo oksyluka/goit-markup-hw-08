@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--light-color);
   border-bottom: 1px solid #ececec;
 
   &__container {
@@ -8,14 +14,24 @@
 
   &__logo {
     display: block;
-    margin-right: 93px;
     color: #000000;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: 88px;
+
+    @include mq(desktop) {
+      margin-right: 93px;
+    }
   }
 }
 
 .navigation {
   display: flex;
   margin: 0;
+
+  @include mq(mobile-only) {
+    display: none;
+  }
 
   &__item {
     margin-right: 50px;
@@ -30,7 +46,6 @@
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--title-color);
-    text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -61,11 +76,24 @@
 }
 
 .contact {
-  display: flex;
-  margin-left: auto;
+  display: block;
+  margin-left: 84px;
 
-  &__item {
-    margin-right: 50px;
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__item:first-child {
+    margin-bottom: 10px;
+
+    @include mq(desktop) {
+      margin-right: 50px;
+    }
   }
 
   &__link {
@@ -75,19 +103,20 @@
     fill: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     transition: color var(--trans), fill var(--trans);
+
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
 
     &:hover,
     &:focus {
       color: var(--active-color);
       fill: var(--active-color);
-    }
-
-    &:last-child {
-      margin-right: 0px;
     }
   }
 

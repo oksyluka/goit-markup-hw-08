@@ -1,6 +1,11 @@
 .section--no-padding-top {
   padding-top: 0;
+
+  @include mq(not-desktop) {
+    display: none;
+  }
 }
+
 .activity {
   display: flex;
 
@@ -16,7 +21,7 @@
     max-width: 100%;
     height: auto;
   }
-  
+
   &__title {
     position: absolute;
     bottom: 0;
