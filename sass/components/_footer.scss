@@ -9,14 +9,15 @@
     @include mq(desktop) {
       display: flex;
       align-items: baseline;
+      text-align: left;
     }
   }
 
   &__contacts {
     @include mq(tablet) {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: baseline;
+      justify-content: space-around;
     }
   }
 
@@ -59,9 +60,7 @@
   @include mq(mobile-only) {
     margin-top: 60px;
   }
-  @include mq(tablet-only) {
-    margin-left: 165px;
-  }
+
   @include mq(desktop) {
     margin-left: 70px;
   }

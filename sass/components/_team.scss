@@ -29,7 +29,7 @@
       flex-basis: calc((100% - 60px) / 2);
     }
     @include mq(desktop) {
-      width: calc((100% - 90px) / 4);
+      flex-basis: calc((100% - 90px) / 4);
 
       &:not(:last-child) {
         margin-right: 30px;
