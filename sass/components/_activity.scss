@@ -8,11 +8,10 @@
 
 .activity {
   display: flex;
+  justify-content: space-between;
 
   &__item {
     position: relative;
-    flex-basis: calc((100% - 54px) / 3);
-
     &:not(:last-child) {
       margin-right: 27px;
     }
