@@ -85,9 +85,11 @@
     display: none;
   }
 
+  @include mq(tablet) {
+    margin-left: auto;
+  }
   @include mq(desktop) {
     display: flex;
-    margin-left: auto;
   }
 
   &__item:first-child {
@@ -95,6 +97,7 @@
 
     @include mq(desktop) {
       margin-right: 50px;
+      margin-bottom: 0;
     }
   }
 
